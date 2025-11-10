@@ -10,8 +10,10 @@ st.header('Análisis exploratorio vehículos en US')
 # Crear un botón en la aplicación Streamlit
 hist_button = st.button('Construir histograma')
 
-# Lógica a ejecutar cuando se hace clic en el botón
-if hist_button:
+# crear una casilla de verificación
+build_histogram = st.checkbox('Construir un histograma')
+
+if build_histogram: # si la casilla de verificación está seleccionada
     # Escribir un mensaje en la aplicación
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
 
@@ -27,7 +29,7 @@ if hist_button:
     st.plotly_chart(fig, use_container_width=True)
     
 # Crear un botón en la aplicación Streamlit
-hist_button = st.button('Construir gráfico de dispersón')
+disp_button = st.button('Construir gráfico de dispersón')
 
 # Lógica a ejecutar cuando se hace clic en el botón
 if hist_button:
